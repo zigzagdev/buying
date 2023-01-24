@@ -9,7 +9,7 @@ class Retailer extends Model
 {
     use HasFactory;
 
-    public function Retailer()
+    public function Item()
     {
         $this->hasMany('App\Item');
     }

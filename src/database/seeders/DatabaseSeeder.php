@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\History;
 use Illuminate\Database\Seeder;
 
 
@@ -18,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(RetailerTableSeeder::class);
         $this->call(ItemTableSeeder::class);
+        $this->call(HistoryTableSeeder::class);
     }
 }

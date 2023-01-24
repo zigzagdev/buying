@@ -15,9 +15,7 @@ class CreateHistoriesTable extends Migration
     {
         Schema::create('histories', function (Blueprint $table) {
             $table->unsignedBigInteger('item_id');
-            $table->unsignedBigInteger('retailer_id');
             $table->mediumInteger('amount');
-            $table->foreign('retailer_id')->references('id')->on('retailers')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('item_id')->references('id')->on('items')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
