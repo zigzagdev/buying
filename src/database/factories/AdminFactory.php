@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 
-class RetailerFactory extends Factory
+class AdminFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,8 +15,8 @@ class RetailerFactory extends Factory
     public function definition()
     {
         return [
-            'employee_name' => $this->faker->name(),
-            'company_name' => $this->faker->company(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'password' => Hash::make('factory1212'),
         ];
     }
 }

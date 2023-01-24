@@ -17,7 +17,6 @@ class CreateRetailersTable extends Migration
             $table->bigIncrements('id');
             $table->string('employee_name', 30);
             $table->string('company_name', 50)->unique();
-            $table->string('item', 255);
             $table->timestamps();
             $table->softDeletes();
         });
